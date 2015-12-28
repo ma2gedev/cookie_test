@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
+
+  resources :cookie, only: [:index]
+  get 'cookie/add_cookie' => 'cookie#add_cookie'
 end
